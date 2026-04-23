@@ -2,6 +2,9 @@
 
 A modern scientific calculator built with HTML, CSS, and JavaScript.
 
+## Screenshot
+![Calculator](./screenshots/calculator.png)
+
 ## Features
 - Basic arithmetic operations
 - Square root and power
