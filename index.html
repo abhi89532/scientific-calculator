@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <div class="calculator">
+      <div class="top-bar">
+        <h1>Scientific Calculator</h1>
+
+        <div class="top-actions">
+          <button id="historyToggle" class="icon-btn" title="History">🕘</button>
+          <button id="soundToggle" class="icon-btn" title="Toggle Sound">🔊</button>
+          <button id="themeToggle" class="icon-btn" title="Toggle Theme">🌙</button>
+        </div>
+      </div>
+
+      <div class="memory-bar">
+        <button class="memory-btn" data-memory="MC">MC</button>
+        <button class="memory-btn" data-memory="MR">MR</button>
+        <button class="memory-btn" data-memory="M+">M+</button>
+        <button class="memory-btn" data-memory="M-">M-</button>
+        <span id="memoryIndicator">M: 0</span>
+      </div>
+
+      <div class="display-box">
+        <div id="expression" class="expression"></div>
+        <input type="text" id="display" value="0" readonly />
+      </div>
+
+      <div class="buttons">
+        <button class="btn scientific" data-value="(">(</button>
+        <button class="btn scientific" data-value=")">)</button>
+        <button class="btn scientific" data-action="sqrt">√</button>
+        <button class="btn scientific" data-action="power">xʸ</button>
+
+        <button class="btn function" data-value="C">C</button>
+        <button class="btn function" data-value="DEL">DEL</button>
+        <button class="btn function" data-value="%">%</button>
+        <button class="btn operator" data-value="/">÷</button>
+
+        <button class="btn number" data-value="7">7</button>
+        <button class="btn number" data-value="8">8</button>
+        <button class="btn number" data-value="9">9</button>
+        <button class="btn operator" data-value="*">×</button>
+
+        <button class="btn number" data-value="4">4</button>
+        <button class="btn number" data-value="5">5</button>
+        <button class="btn number" data-value="6">6</button>
+        <button class="btn operator" data-value="-">−</button>
+
+        <button class="btn number" data-value="1">1</button>
+        <button class="btn number" data-value="2">2</button>
+        <button class="btn number" data-value="3">3</button>
+        <button class="btn operator" data-value="+">+</button>
+
+        <button class="btn number zero" data-value="0">0</button>
+        <button class="btn number" data-value=".">.</button>
+        <button class="btn equals" data-value="=">=</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="historyModal" class="history-modal">
+    <div class="history-popup">
+      <div class="history-header">
+        <h2>History</h2>
+        <div class="history-actions">
+          <button id="clearHistory" class="clear-history">Clear</button>
+          <button id="closeHistory" class="icon-btn">✖</button>
+        </div>
+      </div>
+      <ul id="historyList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
